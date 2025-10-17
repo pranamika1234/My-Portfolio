@@ -1,3 +1,5 @@
+// "coderabbit review --plain"    code for runing the coderabbit ai in the terminal
+//also change the shell path to "wsl.exe -d Ubuntu" if required after restart
 import {navlinks} from "../constants";
 const NavBar = () => {
     return(
