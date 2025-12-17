@@ -32,10 +32,10 @@ const EarthCanvas = () => {
     return () => motionQuery.removeEventListener("change", handleMotionChange);
   }, []);
 
-  if (isMobile || prefersReducedMotion) {
+  if (prefersReducedMotion) {
     return (
       <div className='w-full h-full rounded-2xl bg-gradient-to-br from-[#0b1224] via-[#111827] to-[#1f2937] flex items-center justify-center text-secondary text-sm px-4 text-center'>
-        3D background is paused on mobile to keep things smooth.
+        3D background is paused to honor reduced-motion settings.
       </div>
     );
   }
@@ -44,7 +44,7 @@ const EarthCanvas = () => {
     <Canvas
       shadows={false}
       frameloop='demand'
-      dpr={[1, 1.5]}
+      dpr={[1, isMobile ? 1 : 1.5]}
       gl={{ preserveDrawingBuffer: false, powerPreference: "high-performance", antialias: false, alpha: true, stencil: false, depth: true }}
       camera={{
         fov: 42,

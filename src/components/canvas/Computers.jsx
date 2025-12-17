@@ -34,39 +34,25 @@ const ComputersCanvas = () => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
+    const handleMediaQueryChange = (event) => setIsMobile(event.matches);
     mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
+    return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
   }, []);
 
   useEffect(() => {
     const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     setPrefersReducedMotion(motionQuery.matches);
-
     const handleMotionChange = (event) => setPrefersReducedMotion(event.matches);
     motionQuery.addEventListener("change", handleMotionChange);
     return () => motionQuery.removeEventListener("change", handleMotionChange);
   }, []);
 
-  if (isMobile || prefersReducedMotion) {
+  if (prefersReducedMotion) {
     return (
       <div className='w-full h-full rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e1b4b] flex items-center justify-center text-secondary text-sm px-4 text-center'>
-        3D preview is disabled on mobile for stability. View on desktop for the full experience.
+        3D preview is paused to honor reduced-motion settings.
       </div>
     );
   }
@@ -75,7 +61,7 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop='demand'
       shadows={false}
-      dpr={[1, 1.5]}
+      dpr={[1, isMobile ? 1 : 1.5]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: false, powerPreference: "high-performance", antialias: false, alpha: true, stencil: false, depth: true }}
     >
