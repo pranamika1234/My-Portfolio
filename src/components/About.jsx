@@ -45,7 +45,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[15px] sm:text-[17px] max-w-3xl leading-[26px] sm:leading-[30px] text-justify"
       >
         Hey there! I’m Pranamika Kalita — a Full Stack Developer who loves building the bridge between imagination and innovation. I work with the MERN stack (MongoDB, Express.js, React, Node.js) to craft digital experiences that don’t just function — they flow.
 

@@ -67,7 +67,7 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className='mt-3 text-secondary text-[15px] sm:text-[17px] max-w-3xl leading-[26px] sm:leading-[30px] text-justify'
         >
          Every project I create starts with curiosity — a small spark that turns into lines of code and, eventually, a living digital experience. I love taking ideas that exist only in my imagination and shaping them into something people can actually use. From building sleek, responsive interfaces with React to crafting powerful backends with Node.js and FastAPI, each project tells a story of learning, experimentation, and growth. Lately, I’ve been exploring how AI can make web apps smarter — whether it’s a fitness tracker that recommends workouts or a chatbot that understands emotions. For me, projects aren’t just tasks; they’re little adventures that push me to think deeper, code better, and build something that truly connects with people.
         </motion.p>

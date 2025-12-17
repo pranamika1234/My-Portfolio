@@ -32,24 +32,24 @@ const Hero = () => {
   }, [charIndex, itemIndex]);
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className='relative w-full min-h-[720px] sm:min-h-[820px] mx-auto overflow-hidden'>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`mx-auto max-w-7xl ${styles.paddingX} flex flex-col sm:flex-row items-center sm:items-start gap-8 pt-28 sm:pt-32 relative z-10`}
       >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+        <div className='flex flex-col justify-start items-center sm:items-start mt-2 sm:mt-5'>
+          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
+          <div className='sm:w-1 w-[2px] sm:h-80 h-24 violet-gradient' />
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">Pranamika Kalita</span>
+        <div className='flex-1 text-center sm:text-left'>
+          <h1 className={`${styles.heroHeadText} text-white leading-tight`}>
+            Hi, I'm <span className='text-[#915EFF]'>Pranamika Kalita</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <p className={`${styles.heroSubText} mt-4 text-white-100 max-w-3xl mx-auto sm:mx-0`}>
             I'm{" "}
             <span
-              className="typed"
-              aria-hidden="true"
+              className='typed'
+              aria-hidden='true'
               style={{
                 backgroundImage: "linear-gradient(to bottom, rgba(245, 202, 153, 0.5), rgba(245, 202, 153, 0.5))",
                 backgroundRepeat: "no-repeat",
@@ -63,8 +63,8 @@ const Hero = () => {
               {typedText}
             </span>
             <span 
-              className="typed-cursor" 
-              aria-hidden="true"
+              className='typed-cursor' 
+              aria-hidden='true'
             >
               |
             </span>
@@ -73,13 +73,16 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <br /><br /><br />
 
-      <ComputersCanvas />
+      <div className={`mx-auto max-w-7xl ${styles.paddingX} w-full mt-10 sm:mt-4`}>
+        <div className='w-full h-[280px] xs:h-[340px] sm:h-[500px]'>
+          <ComputersCanvas />
+        </div>
+      </div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+      <div className='absolute xs:bottom-10 bottom-24 w-full flex justify-center items-center'>
+        <a href='#about'>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -89,7 +92,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
           </div>
         </a>

@@ -17,22 +17,22 @@ const Tech = () => {
         </h3>
       </motion.div>
 
-      <div className='flex flex-row flex-wrap justify-center gap-10 mt-14'>
+      <div className='flex flex-row flex-wrap justify-center gap-8 sm:gap-10 mt-14'>
         {technologies.map((technology, index) => (
           <div 
-            className='w-28 h-28 flex flex-col items-center justify-center gap-2' 
+            className='w-24 h-24 sm:w-28 sm:h-28 flex flex-col items-center justify-center gap-2' 
             key={technology.name}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <div className={`w-20 h-20 rounded-full bg-gradient-to-br from-[#915EFF] to-[#915EFF]/50 flex items-center justify-center p-4 transition-all duration-300 ${hoveredIndex === index ? 'scale-110 shadow-lg shadow-[#915EFF]/50' : ''}`}>
+            <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[#915EFF] to-[#915EFF]/50 flex items-center justify-center p-4 transition-all duration-300 ${hoveredIndex === index ? 'scale-110 shadow-lg shadow-[#915EFF]/50' : ''}`}>
               <img
                 src={technology.icon}
                 alt={technology.name}
                 className='w-full h-full object-contain'
               />
             </div>
-            <p className='text-white text-[10px] text-center font-medium'>
+            <p className='text-white text-[11px] sm:text-[12px] text-center font-medium'>
               {technology.name}
             </p>
           </div>
