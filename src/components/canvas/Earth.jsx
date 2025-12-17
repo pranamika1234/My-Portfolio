@@ -4,11 +4,14 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Earth = () => {
+const Earth = ({ isMobile }) => {
   const earth = useGLTF("./planet/scene.gltf");
 
+  // Slightly smaller scale on mobile to reduce GPU load
+  const scale = isMobile ? 1.8 : 2.5;
+
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <primitive object={earth.scene} scale={scale} position-y={0} rotation-y={0} />
   );
 };
 
@@ -56,11 +59,12 @@ const EarthCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           autoRotate
+          autoRotateSpeed={0.6}
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Earth />
+        <Earth isMobile={isMobile} />
 
         <Preload all />
       </Suspense>
