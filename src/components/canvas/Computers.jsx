@@ -31,6 +31,7 @@ const Computers = ({ isMobile }) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -53,13 +54,30 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setPrefersReducedMotion(motionQuery.matches);
+
+    const handleMotionChange = (event) => setPrefersReducedMotion(event.matches);
+    motionQuery.addEventListener("change", handleMotionChange);
+    return () => motionQuery.removeEventListener("change", handleMotionChange);
+  }, []);
+
+  if (isMobile || prefersReducedMotion) {
+    return (
+      <div className='w-full h-full rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e1b4b] flex items-center justify-center text-secondary text-sm px-4 text-center'>
+        3D preview is disabled on mobile for stability. View on desktop for the full experience.
+      </div>
+    );
+  }
+
   return (
     <Canvas
       frameloop='demand'
-      shadows
-      dpr={[1, 2]}
+      shadows={false}
+      dpr={[1, 1.5]}
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: false, powerPreference: "high-performance", antialias: false, alpha: true, stencil: false, depth: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
