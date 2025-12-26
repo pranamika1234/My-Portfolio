@@ -98,54 +98,8 @@ const technologies = [
   { name: "AI", icon: "/assets/ai.avif" },
 ];
 
-const experiences = [
-  {
-    title: "Full Stack Developer",
-    company_name: "TechNova Labs(Internship)",
-    icon: cognizant,
-    iconBg: "#fff",
-    date: "May 2024 - June 2024",
-    points: [
-      "Built and deployed scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js).",
-      "Developed a Fitness Tracker Web App with FastAPI, PostgreSQL, and PyTorch integration for AI-based workout analytics.",
-    ],
-  },
-  {
-    title: "Intern",
-    company_name: "WebVibe Studios",
-    icon: cognizant,
-    iconBg: "#fff",
-    date: "Dec 2024 - Jan 2025",
-    points: [
-      "Creative digital agency building responsive frontends.",
-      "Deployed production-ready apps via Render and Vercel with continuous integration workflows.",
-    ],
-  },
-  {
-    title: "Freelancer(Offline through network)",
-    company_name: "Small Start Up",
-    icon: cognizant,
-    iconBg: "#fff",
-    date: "March 2025 - April 2025",
-    points: [
-      "Developed a web application using HTML, CSS, Javascript, PHP, and Bootstrap for the client.",
-      "Designed user-friendly UI/UX with responsive designs to make it easy for users to navigate through the website.",
-      "Designed various different websites with responsive designs and dynamic content.",
-    ],
-  },
-  {
-    title: "Research Intern",
-    company_name: "Under my guide Prof. Dr. Sanchita Ray",
-    icon: cognizant,
-    iconBg: "#1294C8",
-    date: "Currently going on",
-    points: [
-      "The Project is about a PINN Model for physics calculations and simulations.",
-      "A model designed to study the Light Scattering of particles.",
-      "AI model predicts the Light Scattering patterns and nature of the particles based on input parameters.",
-    ],
-  },
-];
+const experiences = [];
+
 
 const extracurricular = [
   {
@@ -212,12 +166,12 @@ const projects = [
     ],
     image: ecommerceImg,
     source_code_link: "https://github.com/pranamika1234/handecor",
-    live_site_link: "https://pranamika1234.github.io/handecor/#/shop",
+    live_site_link: "https://pranamika1234.github.io/handecor/#/",
   },
   {
-    name: "Event Management Website",
+    name: "Skin Care Blog",
     description:
-      "The Event Management Website is a platform designed to streamline the organization and management of events. It allows users to create, manage, and promote events while providing a seamless experience for attendees.",
+      "The Gold Skin Beauty Website is a skin care blog that suggests various skin products with major source of income as affiliate marketing.",
     tags: [
       { name: "html", color: "blue-text-gradient" },
       { name: "css", color: "green-text-gradient" },
@@ -225,6 +179,8 @@ const projects = [
       { name: "tailwindcss", color: "blue-text-gradient" },
     ],
     image: eventImg,
+    source_code_link: "https://github.com/pranamika1234/blog",
+    live_site_link: "https://www.goldskins.shop/",
   },
 ];
 
