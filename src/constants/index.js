@@ -21,17 +21,9 @@ import {
   linkedin,
   hackerrank,
   karate,
-<<<<<<< HEAD:src/constants/index.js
   portfolioImg,
   eventImg,
   ecommerceImg,
-  pglife,
-  sortingvisualiser,
-=======
-  portfolio,
-  ecommerce,
-  event,
->>>>>>> de419e36 (Add repo and live links to first project card):Portfolio-website-main/src/constants/index.js
   aws,
   nodejs,
   mongodb,
@@ -204,14 +196,9 @@ const projects = [
       { name: "framer-motion", color: "pink-text-gradient" },
       { name: "three.js", color: "blue-text-gradient" },
     ],
-<<<<<<< HEAD:src/constants/index.js
-      image: portfolioImg,
-    
-=======
-    image: portfolio,
+    image: portfolioImg,
     source_code_link: "https://github.com/pranamika1234/My-Portfolio",
     live_site_link: "https://www.pranamika.in/",
->>>>>>> de419e36 (Add repo and live links to first project card):Portfolio-website-main/src/constants/index.js
   },
   {
     name: "Handmade Products E-Commerce Website",
@@ -223,12 +210,7 @@ const projects = [
       { name: "bootstrap", color: "pink-text-gradient" },
       { name: "javascript", color: "green-text-gradient" },
     ],
-<<<<<<< HEAD:src/constants/index.js
     image: ecommerceImg,
-    
-=======
-    image: ecommerce,
->>>>>>> de419e36 (Add repo and live links to first project card):Portfolio-website-main/src/constants/index.js
   },
   {
     name: "Event Management Website",
@@ -240,12 +222,7 @@ const projects = [
       { name: "javascript", color: "pink-text-gradient" },
       { name: "tailwindcss", color: "blue-text-gradient" },
     ],
-<<<<<<< HEAD:src/constants/index.js
     image: eventImg,
-    
-=======
-    image: event,
->>>>>>> de419e36 (Add repo and live links to first project card):Portfolio-website-main/src/constants/index.js
   },
 ];
 
