@@ -21,11 +21,17 @@ import {
   linkedin,
   hackerrank,
   karate,
+<<<<<<< HEAD:src/constants/index.js
   portfolioImg,
   eventImg,
   ecommerceImg,
   pglife,
   sortingvisualiser,
+=======
+  portfolio,
+  ecommerce,
+  event,
+>>>>>>> de419e36 (Add repo and live links to first project card):Portfolio-website-main/src/constants/index.js
   aws,
   nodejs,
   mongodb,
@@ -33,53 +39,20 @@ import {
 
 
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "education",
-    title: "Qualifications",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "extracurricular",
-    title: "Extracurricular",
-  },
-  {
-    id: "skills",
-    title: "Skills",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "education", title: "Qualifications" },
+  { id: "work", title: "Work" },
+  { id: "extracurricular", title: "Extracurricular" },
+  { id: "skills", title: "Skills" },
+  { id: "projects", title: "Projects" },
+  { id: "contact", title: "Contact" },
 ];
 
 const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "Frontend Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "AI Developer",
-    icon: fullstack,
-  },
+  { title: "Web Developer", icon: web },
+  { title: "Frontend Developer", icon: mobile },
+  { title: "Backend Developer", icon: backend },
+  { title: "AI Developer", icon: fullstack },
 ];
 
 const education = [
@@ -99,9 +72,7 @@ const education = [
     icon: "/desktop_pc/textures/Highersecondaryschool.png",
     iconBg: "#fff",
     date: "(2020-2022)",
-    points: [
-      "Courses undertaken: Physics, Chemistry, Mathematics and Biology.",
-    ],
+    points: ["Courses undertaken: Physics, Chemistry, Mathematics and Biology."],
   },
   {
     title: "Senior Secondary",
@@ -117,70 +88,22 @@ const education = [
 ];
 
 const technologies = [
-  {
-    name: "Express.js",
-    icon: "/assets/expresslogo.png",
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "node.js",
-    icon: nodejs,
-  },
-  {
-    name: "MySQL",
-    icon: mysql,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "PostgreSQL",
-    icon: "/assets/postgresql.png",
-  },
-  {
-    name: "FastAPI",
-    icon: "/assets/fastapi.svg",
-  },
-  {
-    name: "RESTful API",
-    icon: "/assets/restfulapi.png",
-  },
-  {
-    name: "Vercel",
-    icon: "/assets/vercel.svg",
-  },
-  {
-    name: "AI",
-    icon: "/assets/ai.avif",
-  },
+  { name: "Express.js", icon: "/assets/expresslogo.png" },
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "JavaScript", icon: javascript },
+  { name: "React JS", icon: reactjs },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "node.js", icon: nodejs },
+  { name: "MySQL", icon: mysql },
+  { name: "MongoDB", icon: mongodb },
+  { name: "git", icon: git },
+  { name: "AWS", icon: aws },
+  { name: "PostgreSQL", icon: "/assets/postgresql.png" },
+  { name: "FastAPI", icon: "/assets/fastapi.svg" },
+  { name: "RESTful API", icon: "/assets/restfulapi.png" },
+  { name: "Vercel", icon: "/assets/vercel.svg" },
+  { name: "AI", icon: "/assets/ai.avif" },
 ];
 
 const experiences = [
@@ -192,7 +115,7 @@ const experiences = [
     date: "May 2024 - June 2024",
     points: [
       "Built and deployed scalable web applications using the MERN stack (MongoDB, Express.js, React, Node.js).",
-      "Developed a Fitness Tracker Web App with FastAPI, PostgreSQL, and PyTorch integration for AI-based workout analytics."
+      "Developed a Fitness Tracker Web App with FastAPI, PostgreSQL, and PyTorch integration for AI-based workout analytics.",
     ],
   },
   {
@@ -214,8 +137,8 @@ const experiences = [
     date: "March 2025 - April 2025",
     points: [
       "Developed a web application using HTML, CSS, Javascript, PHP, and Bootstrap for the client.",
-      "Designed user-friendly UI/UX with responsive designs to make it easy for users to navigate through the website. ",
-      "Designed various different websites with responsive designs and dynamic content. ",
+      "Designed user-friendly UI/UX with responsive designs to make it easy for users to navigate through the website.",
+      "Designed various different websites with responsive designs and dynamic content.",
     ],
   },
   {
@@ -247,9 +170,7 @@ const extracurricular = [
     icon: "/desktop_pc/textures/IITG_logo.png",
     iconBg: "#050C18",
     date: "30 Aug 2025",
-    points: [
-      "Achieved Winner Certificate for Agentic AI Hackathon, organized by TechGyan at IIT G",
-    ],
+    points: ["Achieved Winner Certificate for Agentic AI Hackathon, organized by TechGyan at IIT G"],
   },
   {
     title: "Web Development-Internshala",
@@ -278,83 +199,54 @@ const projects = [
     description:
       "Web Portfolio in React JS which uses 3D graphics and animations to bring the content to life. The website is divided into several main sections, including an about, Education, project, connect and contact section. Each section is designed to showcase 3D's unique style and creativity, with an emphasis on interactivity and user engagement.",
     tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "green-text-gradient",
-      },
-      {
-        name: "framer-motion",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "three.js",
-        color: "blue-text-gradient",
-      },
+      { name: "react", color: "blue-text-gradient" },
+      { name: "tailwind", color: "green-text-gradient" },
+      { name: "framer-motion", color: "pink-text-gradient" },
+      { name: "three.js", color: "blue-text-gradient" },
     ],
+<<<<<<< HEAD:src/constants/index.js
       image: portfolioImg,
     
+=======
+    image: portfolio,
+    source_code_link: "https://github.com/pranamika1234/My-Portfolio",
+    live_site_link: "https://www.pranamika.in/",
+>>>>>>> de419e36 (Add repo and live links to first project card):Portfolio-website-main/src/constants/index.js
   },
   {
     name: "Handmade Products E-Commerce Website",
     description:
       "An e-commerce website dedicated to handmade products like home decor, accessories, and gifts. The Website offers a user-friendly interface where customers can browse through various categories, view detailed product descriptions.",
     tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "bootstrap",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "green-text-gradient",
-      },
+      { name: "html", color: "blue-text-gradient" },
+      { name: "css", color: "green-text-gradient" },
+      { name: "bootstrap", color: "pink-text-gradient" },
+      { name: "javascript", color: "green-text-gradient" },
     ],
+<<<<<<< HEAD:src/constants/index.js
     image: ecommerceImg,
     
+=======
+    image: ecommerce,
+>>>>>>> de419e36 (Add repo and live links to first project card):Portfolio-website-main/src/constants/index.js
   },
   {
     name: "Event Management Website",
     description:
       "The Event Management Website is a platform designed to streamline the organization and management of events. It allows users to create, manage, and promote events while providing a seamless experience for attendees.",
     tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "javascript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "blue-text-gradient",
-      },
+      { name: "html", color: "blue-text-gradient" },
+      { name: "css", color: "green-text-gradient" },
+      { name: "javascript", color: "pink-text-gradient" },
+      { name: "tailwindcss", color: "blue-text-gradient" },
     ],
+<<<<<<< HEAD:src/constants/index.js
     image: eventImg,
     
+=======
+    image: event,
+>>>>>>> de419e36 (Add repo and live links to first project card):Portfolio-website-main/src/constants/index.js
   },
 ];
 
-export {
-  services,
-  technologies,
-  experiences,
-  extracurricular,
-  projects,
-  education,
-};
+export { services, technologies, experiences, extracurricular, projects, education };

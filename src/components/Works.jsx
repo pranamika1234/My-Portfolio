@@ -13,6 +13,8 @@ const ProjectCard = ({
   description,
   tags,
   image,
+  source_code_link,
+  live_site_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -37,6 +39,29 @@ const ProjectCard = ({
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        </div>
+
+        <div className='mt-4 flex flex-wrap gap-3'>
+          {source_code_link && (
+            <a
+              href={source_code_link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='bg-[#915EFF] text-white px-4 py-2 rounded-xl text-[14px] font-semibold hover:bg-[#7a4dd7] transition-colors duration-200'
+            >
+              GitHub
+            </a>
+          )}
+          {live_site_link && (
+            <a
+              href={live_site_link}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='bg-white text-secondary px-4 py-2 rounded-xl text-[14px] font-semibold hover:bg-slate-200 transition-colors duration-200'
+            >
+              Live Site
+            </a>
+          )}
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
