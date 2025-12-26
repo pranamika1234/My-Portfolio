@@ -211,6 +211,8 @@ const projects = [
       { name: "javascript", color: "green-text-gradient" },
     ],
     image: ecommerceImg,
+    source_code_link: "https://github.com/pranamika1234/handecor",
+    live_site_link: "https://pranamika1234.github.io/handecor/#/shop",
   },
   {
     name: "Event Management Website",
