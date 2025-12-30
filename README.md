@@ -10,7 +10,7 @@ Hey there! I'm Pranamika, a Web developer with a penchant for turning ideas into
 
 ## 🌐 Explore More
 
-Ready to experience my 3D portfolio? Head over to [pranamikakalita.vercel.app](https://pranamikakalita.vercel.app/) and let the visuals speak for themselves!
+Ready to experience my 3D portfolio? Head over to [pranamika.in](https://www.pranamika.in/) and let the visuals speak for themselves!
 
 ## 📫 Let's Connect
 
